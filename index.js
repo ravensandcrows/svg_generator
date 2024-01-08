@@ -2,7 +2,10 @@
 //parent class for setting color
 //make shape class take everything
 
-const CLI = require('./lib/cli.js');
+
+const CLI = require('./main/lib/cli.js');
+
+
 
 const cli = new CLI();
 
