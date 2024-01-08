@@ -39,7 +39,7 @@ class CLI {
                     case 'rectangle':
                         console.log('Rectangle is being created');
                         const rectangle = new Rectangle(answers.logo_name, answers.color_code, answers.color_keyword, answers.hexa_code, answers.shape,
-                            answers.shape_color_code, answers.shape_color_keyword, answers.shape_hexa_code, answers.width, answers.height)
+                            answers.shape_color_code, answers.shape_color_keyword, answers.shape_hexa_code, answers.rec_width, answers.height)
                         fs.writeFile("main/output/logo.svg", rectangle.renderRectangle(), (err) => {
                             if (err) {
                                 console.error(err);

@@ -8,7 +8,10 @@ class Shapes {
     shape_color_keyword;
     shape_hexa_code;
     radius;
-    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code, radius){
+    rec_width;
+    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code, radius, rec_width){
+        color_keyword = color_keyword.replace(/\s/g, "");
+        shape_color_keyword = shape_color_keyword.replace(/\s/g, "");
         this.logo_name = logo_name;
         this.color_code = color_code;
         this.color_keyword = color_keyword
@@ -18,6 +21,7 @@ class Shapes {
         this.shape_color_keyword = shape_color_keyword;
         this.shape_hexa_code = shape_hexa_code;
         this.radius = radius;
+        this.rec_width =rec_width;
     }
 
     setLogoTriangle(){
@@ -165,17 +169,17 @@ class Square extends Shapes {
 }
 
 class Rectangle extends Shapes {
-    width;
+    rec_width;
     height;
 
-    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code, width, height){
+    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code, rec_width, height){
         super(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code);
-        this.width=width;
+        this.rec_width=rec_width;
         this.height=height;
     }
 
     renderRectangle(){
-        const xText = `${this.width}`/2;
+        const xText = `${this.rec_width}`/2;
         const yText = `${this.height}`/2;
 
         if(this.shape_color_code === 'keyword'){
@@ -183,7 +187,7 @@ class Rectangle extends Shapes {
                 return `<svg version="1.1"
                 width="500" height="500"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect width="${this.width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
+                <rect width="${this.rec_width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
                 fill="${this.color_keyword}">${this.logo_name}</text>
                 </svg>`
@@ -192,7 +196,7 @@ class Rectangle extends Shapes {
                 return `<svg version="1.1"
                 width="500" height="500"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect width="${this.width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
+                <rect width="${this.rec_width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
                 fill="#${this.hexa_code}">${this.logo_name}</text>
                 </svg>`
@@ -203,7 +207,7 @@ class Rectangle extends Shapes {
                 return `<svg version="1.1"
                 width="500" height="500"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect width="${this.width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
+                <rect width="${this.rec_width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
                 fill="${this.color_keyword}">${this.logo_name}</text>
                 </svg>`
@@ -212,7 +216,7 @@ class Rectangle extends Shapes {
                 return `<svg version="1.1"
                 width="500" height="500"
                 xmlns="http://www.w3.org/2000/svg">
-                <rect width="${this.width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
+                <rect width="${this.rec_width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
                 fill="#${this.hexa_code}">${this.logo_name}</text>
                 </svg>`
