@@ -1,4 +1,10 @@
 const color_keyword_list = require('./color');
+//SQUARE: make sure number is entered for width
+//SQUARE make sure width is at least 150
+//COLOR CODE remove any spaces in the string
+//prevent height/width being the same for a rectangle
+//radius number only!
+
 const questions = [
     // logo name
     {
@@ -59,6 +65,24 @@ const questions = [
         name: 'shape',
         message: 'Please choose your logo shape',
         choices: ['square', 'circle', 'triangle', 'rectangle', 'diamond']
+    },
+    {
+        type: 'input',
+        name: 'radius',
+        when:  (answers) => answers.shape === 'circle',
+        message: 'How large should your radius be?' 
+    },
+    {
+        type: 'input',
+        name: 'width',
+        when:  (answers) => answers.shape === 'square',
+        message: 'How large should the width/height of your square be?',
+    },
+    {
+        type: 'input',
+        name: 'height',
+        when:  (answers) => answers.shape === 'rectangle',
+        message: 'How large should the height of your square/rectangle be?',
     },
     // shape: ask if they want to use a color keyword or hexadecimal
     {
