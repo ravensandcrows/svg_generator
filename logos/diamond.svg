@@ -1,0 +1,7 @@
+<svg version="1.1"
+            width="500" height="500"
+            xmlns="http://www.w3.org/2000/svg">
+            <polygon fill="gray" points="9.445,125 125,5.774 240.556,125 125,280.227"/>
+            <text x="130" y="130" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
+            fill="lightblue">SKY</text>
+            </svg>

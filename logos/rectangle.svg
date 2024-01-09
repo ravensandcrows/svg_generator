@@ -1,0 +1,7 @@
+<svg version="1.1"
+                width="300" height="200"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="150" height="90" fill="white"/>
+                <text x="75" y="45" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
+                fill="blue">MAT</text>
+                </svg>
