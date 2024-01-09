@@ -26,11 +26,11 @@ class Shapes {
 
     setLogoTriangle(){
         if(this.color_code === 'keyword'){
-            return `<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
+            return `<text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
             fill="${this.color_keyword}">${this.logo_name}</text>`;
         }
         else{
-            return `<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
+            return `<text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
             fill="#${this.hexa_code}">${this.logo_name}</text>`;
         }  
     }
@@ -68,17 +68,17 @@ class Circle extends Shapes {
     renderCircle(){
         if(this.shape_color_code === 'keyword'){
             return `<svg version="1.1"
-            width="500" height="500"
+            width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
-            <circle r="${this.radius}" cx="250" cy="250" fill="${this.shape_color_keyword}"/>
+            <circle r="${this.radius}" cx="148" cy="95" fill="${this.shape_color_keyword}"/>
             ${super.setLogoCircle()}
             </svg>`
         }
         else{
             return `<svg version="1.1"
-            width="500" height="500"
+            width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
-            <circle r="${this.radius}" cx="250" cy="250" fill="#${this.shape_hexa_code}"/>
+            <circle r="${this.radius}" cx="148" cy="95" fill="#${this.shape_hexa_code}"/>
             ${super.setLogoCircle()}
             </svg>`
         }
@@ -94,17 +94,17 @@ class Triangle extends Shapes {
     renderTriangle(){
         if(this.shape_color_code === 'keyword'){
             return `<svg version="1.1"
-            width="500" height="500"
+            width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
-            <polygon points="250, 60, 100, 400 400, 400" fill="${this.shape_color_keyword}"/>
+            <polygon points="150,10 280,190 20,190" fill="${this.shape_color_keyword}"/>
             ${super.setLogoTriangle()}
             </svg>`
         }
         else{
             return `<svg version="1.1"
-            width="500" height="500"
+            width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
-            <polygon points="250, 60, 100, 400 400, 400" fill="#${this.shape_hexa_code}"/>
+            <polygon points="150,10 280,190 20,190" fill="#${this.shape_hexa_code}"/>
             ${super.setLogo()}
             </svg>`
         }
@@ -127,7 +127,7 @@ class Square extends Shapes {
         if(this.shape_color_code === 'keyword'){
             if(this.color_code === 'keyword'){
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.width}" height="${this.width}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -136,7 +136,7 @@ class Square extends Shapes {
             }
             else{
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.width}" height="${this.width}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -147,7 +147,7 @@ class Square extends Shapes {
         else{
             if(this.color_code === 'keyword'){
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.width}" height="${this.width}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -156,7 +156,7 @@ class Square extends Shapes {
             }
             else{
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.width}" height="${this.width}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -185,7 +185,7 @@ class Rectangle extends Shapes {
         if(this.shape_color_code === 'keyword'){
             if(this.color_code === 'keyword'){
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.rec_width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -194,7 +194,7 @@ class Rectangle extends Shapes {
             }
             else{
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.rec_width}" height="${this.height}" fill="${this.shape_color_keyword}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -205,7 +205,7 @@ class Rectangle extends Shapes {
         else{
             if(this.color_code === 'keyword'){
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.rec_width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -214,7 +214,7 @@ class Rectangle extends Shapes {
             }
             else{
                 return `<svg version="1.1"
-                width="500" height="500"
+                width="300" height="200"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="${this.rec_width}" height="${this.height}" fill="#${this.shape_hexa_code}"/>
                 <text x="${xText}" y="${yText}" dominant-baseline="middle" text-anchor="middle" font-size="60px" font-weight="700"
@@ -242,7 +242,7 @@ class Diamond extends Shapes {
         }
         else{
             return `<svg version="1.1"
-            width="500" height="500"
+            width="300" height="200"
             xmlns="http://www.w3.org/2000/svg">
             <polygon fill="#${this.shape_hexa_code}" points="9.445,125 125,5.774 240.556,125 125,280.227"/>
             ${super.setLogoDiamond()}
