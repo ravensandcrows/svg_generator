@@ -15,7 +15,9 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Usage
 
-After installing packages, run node and fill out questionnaire
+After installing packages, run node and fill out questionnaire.
+
+https://drive.google.com/file/d/187cAfnzZRE6DT7ThtczOo1HukCuhVwN6/view
 
 
 ## Credits
