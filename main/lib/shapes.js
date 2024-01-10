@@ -10,18 +10,19 @@ class Shapes {
     constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code){
         this.logo_name = logo_name;
         this.color_code = color_code;
+        if(this.color_code === 'keyword'){
+            color_keyword = color_keyword.replace(/\s/g, "");
+        }
         this.color_keyword = color_keyword
         this.hexa_code = hexa_code;
         this.shape = shape;
         this.shape_color_code = shape_color_code
-        this.shape_color_keyword = shape_color_keyword;
-        this.shape_hexa_code = shape_hexa_code;
-        if(this.color_code === 'keyword'){
-            color_keyword = color_keyword.replace(/\s/g, "");
-        }
         if(this.shape_color_code === 'keyword'){
             shape_color_keyword = shape_color_keyword.replace(/\s/g, "");
         }
+        this.shape_color_keyword = shape_color_keyword;
+        this.shape_hexa_code = shape_hexa_code;
+
     }
 
     setLogoTriangle(){
