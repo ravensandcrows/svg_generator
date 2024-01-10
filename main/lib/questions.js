@@ -1,6 +1,5 @@
 const color_keyword_list = require('./color');
 
-//COLOR CODE remove any spaces in the string
 const questions = [
     // logo name
     {
@@ -79,6 +78,7 @@ const questions = [
             }
         } 
     },
+    //square size
     {
         type: 'input',
         name: 'width',
@@ -94,6 +94,7 @@ const questions = [
             }
         }
     },
+    //rectangle width
     {
         type: 'input',
         name: 'rec_width',
@@ -109,6 +110,7 @@ const questions = [
             }
         }
     },
+    //rectangle height
     {
         type: 'input',
         name: 'height',

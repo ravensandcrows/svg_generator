@@ -7,11 +7,7 @@ class Shapes {
     shape_color_code;
     shape_color_keyword;
     shape_hexa_code;
-    radius;
-    rec_width;
-    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code, radius, rec_width){
-        color_keyword = color_keyword.replace(/\s/g, "");
-        shape_color_keyword = shape_color_keyword.replace(/\s/g, "");
+    constructor(logo_name, color_code, color_keyword, hexa_code, shape, shape_color_code, shape_color_keyword, shape_hexa_code){
         this.logo_name = logo_name;
         this.color_code = color_code;
         this.color_keyword = color_keyword
@@ -20,8 +16,12 @@ class Shapes {
         this.shape_color_code = shape_color_code
         this.shape_color_keyword = shape_color_keyword;
         this.shape_hexa_code = shape_hexa_code;
-        this.radius = radius;
-        this.rec_width =rec_width;
+        if(this.color_code === 'keyword'){
+            color_keyword = color_keyword.replace(/\s/g, "");
+        }
+        if(this.shape_color_code === 'keyword'){
+            shape_color_keyword = shape_color_keyword.replace(/\s/g, "");
+        }
     }
 
     setLogoTriangle(){
